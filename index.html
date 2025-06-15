@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1RAN | Профессиональный специалист</title>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('s.ttf') format('truetype');
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'CustomFont', 'Courier New', monospace;
+        }
+        
+        body {
+            color: white;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('photo2.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(0px);
+            z-index: -2;
+        }
+        
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .text-background {
+            background: rgba(50, 50, 50, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 15px 5px rgba(138, 43, 226, 0.6);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .text-background:hover {
+            box-shadow: 0 0 25px 10px rgba(138, 43, 226, 0.8);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #9c27b0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #9c27b0;
+            font-size: 1.8rem;
+            margin: 25px 0 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #9c27b0;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ff9800;
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            border-left: 3px solid #ff9800;
+        }
+        
+        .bio {
+            line-height: 1.6;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        
+        .kasta {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 25px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 3px solid #e91e63;
+        }
+        
+        .kasta h3 {
+            color: #e91e63;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .kasta-content {
+            display: none;
+            padding-top: 15px;
+            line-height: 1.6;
+            color: #b3e5fc;
+        }
+        
+        .works {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+        }
+        
+        .works h3 {
+            color: #9c27b0;
+            margin-bottom: 15px;
+        }
+        
+        .contact {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .contact a {
+            color: #29b6f6;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact a:hover {
+            color: #4fc3f7;
+            text-decoration: underline;
+        }
+        
+        .friends {
+            margin-top: 15px;
+            font-style: italic;
+            color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-background">
+            <header>
+        <a href="https://t.me/nrepe" target="_blank">T1RAN</a>
+                <h2>Трахатель</h2>
+            </header>
+            
+            <div class="quote">
+                "Срал на закон? Я мусорская шавка, которая ебет все и вся"
+            </div>
+            
+            <div class="bio">
+                <h2>Биография</h2>
+                <p>Начал свой путь в 2022 году в возрасте 14 лет. Прошел через 5 различных кланов, где получил бесценный опыт. После небольшого перерыва вернулся в игру весной 2025 года, где столкнулся с такими легендами как Смерть, Валетовый и другие мастера своего дела, которые стали моими наставниками.</p>
+                <p>Моя философия проста: живодёры получают по заслугам, скамеры платят за свою наглость, а уебки остаются при своём.</p>
+            </div>
+            
+            <div class="kasta" onclick="toggleKasta()">
+                <h3>Трахатель <span>▼</span></h3>
+                <div class="kasta-content" id="kastaContent">
+                    <p>Универсальный специалист широкого профиля. Приобретая мои услуги, вы получаете полный контроль на оговоренный срок. Максимальный период сотрудничества - 1 месяц по принципу подписки. Хотите продолжить - продлеваем. Нет - расстаёмся без обид.</p>
+                    <p>Важное правило: кто первый проявляет агрессию - тот и проиграл. В таких случаях защита снимается автоматически.</p>
+                </div>
+            </div>
+            
+            <div class="works">
+                <h3>Ворки</h3>
+                <div class="contact">
+                    <a href="https://t.me/nrepework" target="_blank">@nrepework</a>
+                </div>
+                <div class="friends">
+                    friends:<br>
+                    #RKM<br>
+                    #снялцепи<br>
+                    #CMEPТЬ
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleKasta() {
+            const content = document.getElementById('kastaContent');
+            const arrow = document.querySelector('.kasta h3 span');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                arrow.textContent = '▼';
+            } else {
+                content.style.display = 'block';
+                arrow.textContent = '▲';
+            }
+        }
+    </script>
+</body>
+</html>
