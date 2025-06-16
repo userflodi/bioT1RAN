@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я ДОЛБАЕБ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        .text {
+            color: red;
+            font-size: 15vw;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 
+                0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 0 30px #ff0000,
+                0 0 40px #ff0000,
+                0 0 70px #ff0000,
+                0 0 80px #ff0000,
+                0 0 100px #ff0000,
+                0 0 150px #ff0000;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 
+                    0 0 10px #ff0000,
+                    0 0 20px #ff0000,
+                    0 0 30px #ff0000,
+                    0 0 40px #ff0000,
+                    0 0 70px #ff0000,
+                    0 0 80px #ff0000,
+                    0 0 100px #ff0000,
+                    0 0 150px #ff0000;
+            }
+            to {
+                text-shadow: 
+                    0 0 5px #ff0000,
+                    0 0 10px #ff0000,
+                    0 0 15px #ff0000,
+                    0 0 20px #ff0000,
+                    0 0 35px #ff0000,
+                    0 0 40px #ff0000,
+                    0 0 50px #ff0000,
+                    0 0 75px #ff0000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">Я ДОЛБАЕБ</div>
+</body>
+</html>
